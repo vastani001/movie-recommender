@@ -21,14 +21,14 @@ Given a movie title, the system recommends the top-10 most similar movies based 
 
 ## 📂 Project Structure  
 
-movie-recommender/
-├─ data/
-│ └─ movies.csv
-├─ src/
-│ └─ movie_recommender.py
-├─ main.py
-├─ requirements.txt
-└─ README.md
+    movie-recommender/
+    ├─ data/
+    │ └─ movies.csv
+    ├─ src/
+    │ └─ movie_recommender.py
+    ├─ main.py
+    ├─ requirements.txt
+    └─ README.md
 
 
 
