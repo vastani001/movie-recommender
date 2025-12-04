@@ -27,18 +27,15 @@ class MovieRecommender:
         """Load movies dataset from CSV and prepare basic columns."""
         self.df = pd.read_csv(self.csv_path)
 
-        # Ensure required columns exist
         required_cols = ["title", "overview"]
         for col in required_cols:
             if col not in self.df.columns:
                 raise ValueError(f"Required column '{col}' not found in CSV")
 
-        # Add optional columns if missing
         for col in ["genres", "keywords"]:
             if col not in self.df.columns:
                 self.df[col] = ""
 
-        # Fill NaNs with empty strings to avoid issues
         self.df[["title", "overview", "genres", "keywords"]] = self.df[
             ["title", "overview", "genres", "keywords"]
         ].fillna("")
